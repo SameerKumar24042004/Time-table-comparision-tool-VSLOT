@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSlot - FFCS Timetable Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>VSlot - FFCS Timetable Comparison</h1>
+        <p class="description">Compare timetables and find common free slots easily</p>
+    </header>
+
+    <div class="controls">
+        <button onclick="clearAllSelections()" class="control-btn">Clear All Selections</button>
+        <button onclick="compareSelectedCells()" class="control-btn primary">Compare Time Tables</button>
+        <button onclick="toggleDarkMode()" class="control-btn" id="darkModeToggle">Toggle Dark Mode</button>
+    </div>
+
+    <div class="timetable-container">
+        <div class="timetable-section">
+            <h2>User A's Timetable</h2>
+            <div class="table-wrapper">
+                <table border="5" cellspacing="0">
+                    <tr>
+                        <th>Day/Period</th>
+                        <th>I<br>8:30-10:00</th>
+                        <th>II<br>10:05-11:35</th>
+                        <th>III<br>11:40-13:10</th>
+                        <th>IV<br>13:15-14:45</th>
+                        <th>V<br>14:45-16:20</th>
+                        <th>VI<br>16:25-17:55</th>
+                        <th>VII<br>18:00-19:30</th>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Monday</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A11</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B11</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">C11</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A21</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A14</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B21</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">C21</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Tuesday</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D11</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E11</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">F11</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D21</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E14</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E21</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">F21</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Wednesday</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A12</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B12</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">C12</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A22</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B14</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B22</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A24</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Thursday</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D12</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E12</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">F12</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D22</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">F14</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E22</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">F22</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Friday</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A13</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B13</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">C13</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">A23</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">C14</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B23</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">B24</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Saturday</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D13</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E13</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">F13</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D23</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D14</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">D24</td>
+                        <td class="timetable-cell-userA" onclick="toggleSelection(this)">E23</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="timetable-section">
+            <h2>User B's Timetable</h2>
+            <div class="table-wrapper">
+                <table border="5" cellspacing="0">
+                    <tr>
+                        <th>Day/Period</th>
+                        <th>I<br>8:30-10:00</th>
+                        <th>II<br>10:05-11:35</th>
+                        <th>III<br>11:40-13:10</th>
+                        <th>IV<br>13:15-14:45</th>
+                        <th>V<br>14:45-16:20</th>
+                        <th>VI<br>16:25-17:55</th>
+                        <th>VII<br>18:00-19:30</th>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Monday</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A11</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B11</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">C11</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A21</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A14</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B21</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">C21</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Tuesday</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D11</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E11</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">F11</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D21</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E14</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E21</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">F21</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Wednesday</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A12</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B12</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">C12</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A22</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B14</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B22</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A24</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Thursday</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D12</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E12</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">F12</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D22</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">F14</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E22</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">F22</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Friday</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A13</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B13</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">C13</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">A23</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">C14</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B23</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">B24</td>
+                    </tr>
+                    <tr>
+                        <td class="day-cell">Saturday</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D13</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E13</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">F13</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D23</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D14</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">D24</td>
+                        <td class="timetable-cell-userB" onclick="toggleSelection(this)">E23</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="results-container">
+        <div id="commonSelectedCells" class="result-box clash"></div>
+        <div id="notSelectedCells" class="result-box free"></div>
+    </div>
+
+    <footer>
+        <p>First year project created by Sameer Kumar</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

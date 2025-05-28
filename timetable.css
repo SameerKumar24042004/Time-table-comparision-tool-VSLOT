@@ -1,0 +1,92 @@
+/* Reset some default styles */
+body, table {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the table */
+table {
+  border-collapse: collapse;
+  width: 60%; /* Adjust the table width */
+  margin: 20px auto;
+  background-color: #f9f9f9; /* Background color for the entire table */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+table, th, td {
+  border: 2px solid #3498db; /* Border color */
+}
+
+/* Style the table header */
+th {
+  background-color: #3498db; /* Header background color */
+  color: white;
+  height: 40px; /* Header height */
+  text-align: center;
+  font-size: 16px; /* Header font size */
+}
+
+/* Style the table cells */
+td {
+  height: 70px; /* Cell height */
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px; /* Cell font size */
+  background-color: #ecf0f1; /* Default cell background color */
+}
+
+/* Style the lunch cell */
+td[colspan="3"][rowspan="6"] {
+  background-color: #e74c3c; /* Lunch background color */
+  font-size: 16px; /* Lunch font size */
+}
+
+/* Style the LAB and LIBRARY cells */
+td[colspan="3"][rowspan="2"] {
+  background-color: #f39c12; /* LAB and LIBRARY background color */
+}
+
+/* Style the SPORTS and SEMINAR cells */
+td[colspan="3"][rowspan="2"] {
+  background-color: #27ae60; /* SPORTS and SEMINAR background color */
+}
+
+/* Style the subject cells */
+td:not([colspan]):not([rowspan]) {
+  background-color: #ecf0f1; /* Subject cell background color */
+}
+
+/* Style the day cells */
+td:first-child {
+  background-color: #3498db; /* Day cell background color */
+  color: rgb(196, 32, 32);
+  font-weight: bold;
+  font-size: 16px; /* Day cell font size */
+}
+
+/* Add spacing and padding */
+td, th {
+  padding: 8px; /* Cell padding */
+}
+
+/* Center the table on the page */
+body {
+  text-align: center;
+  background-color: #f2f2f2; /* Page background color */
+}
+
+/* Style the page title */
+h1 {
+  font-size: 24px;
+  margin: 20px 0;
+  color: #3498db; /* Title color */
+}
+
+/* Style the hover effect for cells */
+td:hover {
+  background-color: #3498db; /* Hover background color */
+  color: white; /* Hover text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Pointer cursor on hover */
+}
