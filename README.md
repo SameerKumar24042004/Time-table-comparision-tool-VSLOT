@@ -1,5 +1,7 @@
 # VSlot - FFCS Timetable Comparison Tool
 
+![page view](https://github.com/SameerKumar24042004/Time-table-comparision-tool-VSLOT/blob/main/image/home.jpeg)
+
 🔗 Project URL:https://sameerkumar24042004.github.io/Time-table-comparision-tool-VSLOT/
 
 VSlot is a lightweight, user-friendly web application designed to help students compare their FFCS (Fully Flexible Credit System) timetable slots. Whether you're planning group studies, coordinating team meetings, or just trying to find common free time with friends, VSlot makes it easy to identify overlapping schedules and available time slots.
@@ -39,3 +41,6 @@ Works on all modern browsers:
 - Firefox
 - Safari
 - Edge
+
+## working 
+![page view](https://github.com/SameerKumar24042004/Time-table-comparision-tool-VSLOT/blob/main/image/Untitled%20design.gif)
