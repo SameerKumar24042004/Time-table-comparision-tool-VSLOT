@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Timetable</title>
+  <style>
+    /* General Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Home Page Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://source.unsplash.com/1600x900/?education,school') no-repeat center center/cover;
+      color: #fff;
+    }
+
+    .home-container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .home-container h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .home-container p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .home-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .redirect-btn {
+      padding: 15px 30px;
+      font-size: 1rem;
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .redirect-btn:hover {
+      background-color: #ff4757;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(255, 103, 103, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+<div class="home-container">
+  <h1>Welcome to the Timetable App</h1>
+  <p>Manage your time efficiently and stay on track with your schedule.</p>
+  
+  <a class="redirect-btn" href="index.html">Go to Timetable</a>
+</div>
+
+</body>
+</html>
